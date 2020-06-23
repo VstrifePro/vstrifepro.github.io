@@ -6,10 +6,16 @@ $(document)
         .visibility({
           once: false,
           onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
+            if ($(document).width() > 700)
+            {
+              $('.fixed.menu').transition('fade in');
+            }
           },
           onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
+            if ($(document).width() > 700)
+            {
+            $('.fixed.menu').transition('fade out')
+            }
           }
         })
       ;
