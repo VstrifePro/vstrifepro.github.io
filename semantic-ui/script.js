@@ -6,16 +6,16 @@ $(document)
         .visibility({
           once: false,
           onBottomPassed: function() {
-            if ($(document).width() > 700)
+            if ($(document).width() > 700 && !$('.ui.sidebar').sidebar('is visible'))
             {
               $('.fixed.menu').transition('fade in');
             }
-             else{
+            else{
               $('.fixed.menu').removeAttr("style")
             }
           },
           onBottomPassedReverse: function() {
-            if ($(document).width() > 700)
+            if ($(document).width() > 700 && !$('.ui.sidebar').sidebar('is visible'))
             {
             $('.fixed.menu').transition('fade out')
             }
