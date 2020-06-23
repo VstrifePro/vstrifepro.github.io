@@ -10,11 +10,17 @@ $(document)
             {
               $('.fixed.menu').transition('fade in');
             }
+             else{
+              $('.fixed.menu').removeAttr("style")
+            }
           },
           onBottomPassedReverse: function() {
             if ($(document).width() > 700)
             {
             $('.fixed.menu').transition('fade out')
+            }
+            else{
+              $('.fixed.menu').removeAttr("style")
             }
           }
         })
