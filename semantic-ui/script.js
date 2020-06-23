@@ -1,5 +1,19 @@
 $(document)
     .ready(function() {
+      //menu button
+      $('.ui.button.full').click(function(){
+       if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen(); 
+          }
+        }
+      })
+
+      $('.ui.button.top').click(function(){
+       window.scrollTo({ top: 0, behavior: 'smooth' });
+      })
 
       // fix menu when passed
       $('.masthead')
